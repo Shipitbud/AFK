@@ -1,11 +1,14 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+const mineflayer = require('mineflayer');
 
-version: 2
-updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
-    schedule:
-      interval: "weekly"
+const bot = mineflayer.createBot({
+  host: 'Draculam.aternos.me',
+  port: 28412,
+  username: 'bot'
+});
+
+bot.on('spawn', () => {
+  console.log('Bot joined the server');
+});
+
+bot.on('error', err => console.log(err));
+bot.on('end', () => console.log('Disconnected'));
