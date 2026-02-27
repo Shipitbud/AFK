@@ -1,9 +1,8 @@
 {
   "bot-account": {
-    "username": "bot",
-    "password": "your_password",
-    "type": "microsoft"
-  },
+  "username": "bot",
+  "type": "offline"
+},
 
   "server": {
     "ip": "Draculam.aternos.me",
